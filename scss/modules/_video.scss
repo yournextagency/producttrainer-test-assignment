@@ -1,0 +1,59 @@
+#mod-video {
+  background-image: url('../svg/stars-03.svg');
+  background-size: 25%;
+  background-position: 100% 50px;
+  background-repeat: no-repeat;
+
+  .poster-holder {
+    position: absolute;
+    padding-bottom: 0;
+    transform: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    pointer-events: none;
+    display: none;
+  }
+
+  video {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .plyr {
+    margin: 60px;
+
+    .poster-holder {
+      display: block;
+    }
+
+    .plyr__video-embed {
+      padding-bottom: 67%;
+    }
+
+    @include media-up {
+      .plyr__video-embed {
+        padding-bottom: 46%;
+      }
+
+      video {
+        max-height: 569px;
+      }
+    }
+
+    @include media-down {
+      margin: 0;
+    }
+  }
+  .plyr__play-large {
+    width: 88px;
+    height: 88px;
+  }
+
+  > .container {
+    padding-top: 90px;
+    padding-bottom: 35px;
+  }
+}

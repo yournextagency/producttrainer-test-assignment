@@ -1,0 +1,24 @@
+html {
+  font-size: $magic-number;
+}
+
+html, body {
+  @include font-smoothing(antialiased);
+  height: 100%;
+}
+
+body {
+  font-family: $font-default;
+  color: $color-primary;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 100%;
+  width: 992px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  @include media-down {
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,56 @@
+footer {
+  padding: 79px 0 97px;
+  border-bottom: 14px  solid $grey;
+
+  @include media-down {
+    padding: 50px 0 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom-width: 12px;
+  }
+
+  > .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include media-down {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    @include media-down {
+      order: 5;
+    }
+
+    svg {
+     width: 60px;
+     height: 70px;
+
+     .main-group {
+       fill: $color-primary;
+     }
+   }
+  }
+
+  ul {
+    @include media-down {
+      margin-bottom: 29px;
+    }
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  li.heading {
+    font-weight: 600;
+    margin-bottom: 12px;
+    @include media-down {
+      margin-bottom: 8px;
+    }
+  }
+}

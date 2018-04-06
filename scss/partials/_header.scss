@@ -1,0 +1,169 @@
+header {
+  color: $white;
+  padding-top: 2.3rem;
+  padding-bottom: 2.3rem;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: padding 200ms ease, background 300ms ease-in-out;
+  font-size: 14px;
+
+  @include media-down {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    &.menu-open {
+      background-color: $white;
+      color: $color-primary;
+      &[class*='header-'] {
+        background-color: $white;
+        color: $color-primary;
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+    &::before {
+      content: '';
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 70vh;
+      pointer-events: none;
+      background-color: $color-tertiary;
+      opacity: 0;
+      transition: opacity 400ms ease;
+    }
+  }
+
+  &.sticky {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+
+  &.header-light {
+    background-color: $white;
+    color: $color-primary;
+  }
+
+  &.header-blue {
+    background-color: $color-tertiary;
+    color: $white;
+  }
+
+  &.header-dark {
+    background-color: $color-primary;
+    color: $white;
+  }
+
+  &.header-orange {
+    background-color: $color-secondary;
+    color: $white;
+  }
+
+  &.menu-open {
+    .menu-toggler {
+      svg {
+        &.bars {
+          opacity: 0;
+          transform: scale(.1);
+        }
+
+        &.times {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 2.9rem;
+    position: relative;
+
+    svg {
+      height: 2.9rem;
+      width: 2.5rem;
+
+      .main-group {
+        fill: currentColor;
+      }
+    }
+  }
+
+  .menu-toggler {
+    display: none;
+    width: 30px;
+    height: 25px;
+    position: relative;
+
+    @include media-down {
+      display: flex;
+    }
+
+    svg {
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 200ms ease-in;
+
+      .main-group {
+        fill: currentColor;
+      }
+
+      &.times {
+        transform: scale(.1);
+        opacity: 0;
+      }
+    }
+  }
+
+  nav {
+    @include media-up {
+      display: block !important;
+    }
+    @include media-down {
+      display: none;
+      background-color: $color-primary;
+      color: $white;
+      position: fixed;
+      top: 71px;
+      left: 0;
+      right: 0;
+      height: calc(100vh - 71px);
+      background-image: url('../svg/rocketboy-clouds.svg'), url('../svg/wave-01-mobile-02.svg'), url('../svg/stars-nav-mobile.svg');
+      background-position: calc(100% - 25px) 85%, left bottom, right 20%;
+      background-size: 178px, 100% auto, 50%;
+      background-repeat: no-repeat;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      @include media-down {
+        display: block;
+      }
+    }
+
+    li {
+      margin-left: 2rem;
+
+      @include media-down {
+        display: block;
+        line-height: 84px;
+      }
+    }
+  }
+}

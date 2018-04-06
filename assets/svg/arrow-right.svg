@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="61px" viewBox="0 0 32 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>next (3) copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.0095049505 0.199722772 0.0095049505 60.6729505 31.9444464 60.6729505 31.9444464 0.199722772 0.0095049505 0.199722772"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-landingspage-pt-v2@2x-copy" transform="translate(-1276.000000, -5119.000000)">
+            <g id="next-(3)-copy-3" transform="translate(1276.000000, 5119.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M31.4517228,29.2312079 L2.92451485,0.703366337 C2.25251485,0.0318415842 1.17576238,0.0318415842 0.503762376,0.703366337 C-0.167762376,1.37536634 -0.167762376,2.45211881 0.503762376,3.12411881 L27.8143366,30.4346931 L0.503762376,57.7460594 C-0.167762376,58.4174257 -0.167762376,59.4948119 0.503762376,60.1661782 C0.833584158,60.496 1.27667327,60.6729505 1.70788119,60.6729505 C2.13861386,60.6729505 2.58233663,60.5083564 2.91152475,60.1661782 L31.4393663,31.6389703 C32.1107327,30.9799604 32.1107327,29.8902178 31.4517228,29.2312079 Z" id="Fill-1" fill="#4A4D72" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

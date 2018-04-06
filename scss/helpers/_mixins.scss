@@ -1,0 +1,19 @@
+//----------  font smoothing
+//------------------------------------------------------------------------------
+@mixin font-smoothing ($val: antialiased) {
+  -webkit-font-smoothing: $val;
+  -moz-font-smoothing: $val;
+  -ms-font-smoothing: $val;
+  -o-font-smoothing: $val;
+}
+
+@mixin media-down {
+  @media (max-width: #{$breakpoint} - 1) {
+    @content;
+  }
+}
+@mixin media-up {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,16 @@
+.btn {
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 19.5px 15px;
+  min-width: 276px;
+  background-color: $white;
+  text-align: center;
+  color: $color-primary;
+  font-weight: 600;
+
+  &.orange {
+    color: $color-secondary;
+  }
+}

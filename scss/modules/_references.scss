@@ -1,0 +1,148 @@
+#mod-references {
+  background-color: $grey;
+  background-image: url('../svg/stars-05.svg');
+  background-size: 20%;
+  background-position: 100% 20px;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  overflow: hidden;
+  padding-bottom: 177px;
+
+  @include media-down {
+    padding-top: 55px;
+    padding-bottom: 115px;
+    background-image: none;
+  }
+
+  h2 {
+    margin-bottom: 52px;
+
+    @include media-down {
+      margin-bottom: 37px;
+    }
+  }
+  .slider {
+    position: relative;
+
+    .slick-track {
+      padding-bottom: 30px;
+    }
+  }
+
+  .btn-wrap {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    
+    @include media-up {
+      display: none;
+    }
+  }
+
+  .slick-list {
+    margin: 0 -18.5px;
+  }
+
+  .slide {
+    background-color: $white;
+    margin: 0 18.5px;
+    padding: 40px 36px 50px;
+    position: relative;
+    border-bottom: 4px solid #e4e7ea;
+    outline: none;
+
+    @include media-down {
+      max-width: 100%;
+      margin: 0 auto 68px;
+      display: none;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        display: block;
+      }
+
+      &.show {
+        display: block;
+      }
+
+      &:last-child {
+        margin-bottom: 22px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      bottom: 0;
+      transform: translateY(50%) rotateZ(45deg);
+      width: 37px;
+      height: 37px;
+      background-color: $white;
+      border: 4px solid #e4e7ea;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      background-color: $white;
+      pointer-events: none;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 32px;
+    }
+
+    h5 {
+      font-size: 14px;
+      color: $color-secondary;
+      line-height: 24px;
+      margin-bottom: 11px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @include media-down {
+      display: none;
+    }
+
+    img {
+      max-width: 32px;
+      max-height: 61px;
+    }
+  }
+
+  .arrow-prev {
+    left: -90px;
+    @media (max-width: 1200px) {
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  .arrow-next {
+    right: -90px;
+    @media (max-width: 1200px) {
+      right: 0;
+      z-index: 2;
+    }
+  }
+}
