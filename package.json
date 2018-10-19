@@ -1,6 +1,7 @@
 {
   "name": "product-trainer",
-  "author": "VegaIT",
+  "author": "WSC",
+  "license": "ISC",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "dependencies": {
