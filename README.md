@@ -32,7 +32,7 @@ Share the repo with @karensg, @umkasanki and @emilebosch. (Usernames are the sam
 
 General requirements:
 - Use Craft CMS 3
-- Deploy the website on Hyperlane
+- Deploy the website on [Hyperlane](https://hyperlane.co/)
 
 Website requirements:
 - Make sure to make everything on the website editable
