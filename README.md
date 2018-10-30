@@ -37,3 +37,4 @@ General requirements:
 Website requirements:
 - Make sure to make everything on the website editable
 - Make sure to use Sections, Entries and other Craft functionalities according to best practices
+- Make sure that the order of the blocks on the home page can be easily switched in the CMS
