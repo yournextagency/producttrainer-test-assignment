@@ -1,4 +1,4 @@
-//load dependecies
+//load dependencies
 var gulp             = require('gulp'),
   autoprefixer     = require('autoprefixer'),
   notify           = require('gulp-notify'),
@@ -7,7 +7,6 @@ var gulp             = require('gulp'),
   sass             = require('gulp-sass'),
   sassLint         = require('gulp-sass-lint'),
   sourcemaps       = require('gulp-sourcemaps'),
-  path             = require('path'),
   flexBugsFix      = require('postcss-flexbugs-fixes');
 
   //error notification settings for plumber
@@ -21,7 +20,7 @@ var gulp             = require('gulp'),
 //styles
 gulp.task('styles', function() {
   var processors = [
-    autoprefixer({ browsers: ['last 3 versions', 'ios >= 6'] }),
+    autoprefixer(),
     flexBugsFix
   ];
   return gulp.src(['scss/**/*.scss'])
@@ -46,5 +45,5 @@ gulp.task('sasslint', function () {
 //watch
 gulp.task('default', function() {
   //watch .scss files
-  gulp.watch('scss/**/*.scss', ['styles', 'sasslint']);
+  gulp.watch('scss/**/*.scss', gulp.parallel('styles', 'sasslint'));
 });

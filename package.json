@@ -1,12 +1,12 @@
 {
   "name": "product-trainer",
-  "author": "WSC",
+  "author": "SuperCraft",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^9.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^8.0.0",
@@ -15,5 +15,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "postcss-flexbugs-fixes": "^4.1.0"
   },
-  "sasslintConfig": "sass-lint.yml"
+  "sasslintConfig": "sass-lint.yml",
+  "browserslist": [
+    "last 1 version"
+  ]
 }
