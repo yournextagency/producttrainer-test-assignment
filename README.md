@@ -28,13 +28,14 @@ The main goal of the test assignment is to check your skills of the Craft CMS an
 For this assignment you will have to implement this one-page website in Craft CMS.
 
 Create this assignment in a __private__ repository in Github. If you don't have private repositories, you can use GitLab.
-Share the repo with @karensg, @umkasanki and @emilebosch. (Usernames are the same on Github and Gitlab).
+Share the repo with @karensg, @umkasanki. (Usernames are the same on Github and Gitlab).
 
 General requirements:
-- Use Craft CMS 3
+- Use Craft CMS 3.2
 - Deploy the website on [Hyperlane](https://hyperlane.co/)
 
 Website requirements:
 - Make sure to make everything on the website editable
 - Make sure to use Sections, Entries and other Craft functionalities according to best practices
 - Make sure that the order of the blocks on the home page can be easily switched in the CMS
+- Make sure to install the following plugins: SEOMatic, Blitz
