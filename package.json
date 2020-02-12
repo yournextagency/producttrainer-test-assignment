@@ -5,15 +5,13 @@
   "version": "2.0.0",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^9.1.0",
+    "autoprefixer": "^9.7.4",
     "gulp": "^4.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "postcss-flexbugs-fixes": "^4.1.0"
+    "gulp-sourcemaps": "^2.6.4"
   },
   "sasslintConfig": "sass-lint.yml",
   "browserslist": [

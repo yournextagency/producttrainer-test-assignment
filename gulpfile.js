@@ -1,49 +1,36 @@
-//load dependencies
-var gulp             = require('gulp'),
-  autoprefixer     = require('autoprefixer'),
-  notify           = require('gulp-notify'),
-  plumber          = require('gulp-plumber'),
-  postcss          = require('gulp-postcss'),
-  sass             = require('gulp-sass'),
-  sassLint         = require('gulp-sass-lint'),
-  sourcemaps       = require('gulp-sourcemaps'),
-  flexBugsFix      = require('postcss-flexbugs-fixes');
+// Load dependencies
+var gulp = require('gulp'),
+    autoprefixer = require('autoprefixer'),
+    notify = require('gulp-notify'),
+    plumber = require('gulp-plumber'),
+    postcss = require('gulp-postcss'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps');
 
-  //error notification settings for plumber
-  var plumberErrorHandler = {
+//error notification settings for plumber
+var plumberErrorHandler = {
     errorHandler: notify.onError({
-      title: 'There was some Error, I think...',
-      message: "Error message: <%= error.message %>"
+        title: 'There was some Error, I think...',
+        message: "Error message: <%= error.message %>"
     })
-  };
+};
 
-//styles
-gulp.task('styles', function() {
-  var processors = [
-    autoprefixer(),
-    flexBugsFix
-  ];
-  return gulp.src(['scss/**/*.scss'])
-    .pipe(plumber(plumberErrorHandler))
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(postcss(processors))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('assets/css'));
-    //.pipe(notify(notifySVG)); // uncomment this line if you want to see notifications when CSS is compiled
+// Build styles
+gulp.task('styles', function () {
+    var processors = [
+        autoprefixer()
+    ];
+    return gulp.src(['scss/**/*.scss'])
+        .pipe(plumber(plumberErrorHandler))
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('sasslint', function () {
-  return gulp.src('scss/**/*.scss')
-    .pipe(sassLint({
-      config: '.sass-lint.yml'
-    }))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
-});
-
-//watch
-gulp.task('default', function() {
-  //watch .scss files
-  gulp.watch('scss/**/*.scss', gulp.parallel('styles', 'sasslint'));
+// Watch
+gulp.task('default', function () {
+    //watch .scss files
+    gulp.watch('scss/**/*.scss', gulp.series('styles'));
 });
