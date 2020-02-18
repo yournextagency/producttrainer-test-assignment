@@ -29,7 +29,7 @@ Share the repo with @karensg, @umkasanki (usernames are the same on Github and G
 
 General requirements:
 - Use the latest Craft CMS version.
-- Deploy the website on [Hyperlane](https://hyperlane.co/), it is free.
+- Deploy the website on [Hyperlane](https://hyperlane.co/) or any other hosting of your choice.
 
 Website requirements:
 - Make sure to make everything on the website editable.
