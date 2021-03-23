@@ -11,7 +11,7 @@ yarn
 Use next command to generate index.css
 
 ```
-gulp styles
+yarn gulp styles
 ```
 
 You can just open index.html to view the website.
@@ -20,12 +20,12 @@ You can just open index.html to view the website.
 
 #### Part 1
 
-The main goal of the test assignment is to check your skills of the Craft CMS and how quickly you can learn.
+The main goal of the test assignment is to check your skills of Craft CMS and how quickly you can learn.
 Make sure to read [Craft CMS documentation](https://craftcms.com/docs/3.x/) before you start. If you are using PHPStorm, check out [this article](https://nystudio107.com/blog/auto-complete-craft-cms-3-apis-in-twig-with-phpstorm) as well.
 For this assignment you will implement this one-page website in Craft CMS.
 
 Create this assignment in a __private__ repository in Github. If you don't have private repositories, you can use GitLab.
-Share the repo with @karensg (username is the same on Github and Gitlab).
+Share the repo with @Vesninandrey (@ynavesninandrey on Gitlab).
 
 General requirements:
 - Use the latest Craft CMS version.
@@ -37,7 +37,7 @@ Website requirements:
 - Make sure that the order of the blocks on the home page can be easily moved in order in the CMS.
 - Make sure to install and configure the following plugins: SEOMatic, Blitz and 1 more plugin which you think might be useful.
 
-#### Part 2 (bonus)
+#### Part 2 (backend bonus)
 
 The goal of the second part is to check your level of understanding of Yii2 modules.
 
