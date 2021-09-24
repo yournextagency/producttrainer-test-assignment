@@ -4,8 +4,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps');
+    sass = require('gulp-sass')(require('sass'));
 
 //error notification settings for plumber
 var plumberErrorHandler = {
@@ -20,13 +19,11 @@ gulp.task('styles', function () {
     var processors = [
         autoprefixer()
     ];
-    return gulp.src(['scss/**/*.scss'])
+    return gulp.src(['scss/**/*.scss'], { sourcemaps: true })
         .pipe(plumber(plumberErrorHandler))
-        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(postcss(processors))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/css'));
+        .pipe(gulp.dest('assets/css', { sourcemaps: '.' }));
 });
 
 // Watch
